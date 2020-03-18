@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Student login</title>
+        <script>
+            function validate()
+             {
+            var x = document.getElementById('t1').value;
+            if (x.length<9 || x.length>9) 
+            {
+                alert("Check your id length!");
+                return false;
+            }
+            }
+        </script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <style>
+            body{
+               background-color: lightgrey;
+            }
+        </style>
+    </head>
+    <body>
+        <form method="POST" action="studentdb.php" onsubmit="return validate();">
+            <center>
+                    <center><img src="rec1.jpg" class="rounded" alt="Cinque Terre" width="305" height="236"></center>
+                <center><h1><p class="text-success">Student Login</p></h1></center><br>
+                <input type="text" name="rollno" id="t1" placeholder="Enter your rollno" required><br><br>
+                <input type="text" name="pwd" id="t2" placeholder="Enter your password" required><br><br>
+                <center><input type="submit" class="btn btn-info" value="Go"></center>
+            </center>
+        </form>
+    </body>
+</html>
